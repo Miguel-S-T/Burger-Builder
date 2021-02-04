@@ -3,6 +3,7 @@ import classes from "./Burger.css";
 import BurgerIngredient from "./BurgerIngredient/BurgerIngredient";
 
 const burger = (props) => {
+  // console.log(props);
   // Object.keys() is a method that transforms the ingredients Object into an Array of Strings
   let transformedIngredients = Object.keys(props.ingredients)
     .map((igKey) => {
@@ -28,3 +29,4 @@ const burger = (props) => {
 };
 
 export default burger;
+// withRouter is to pass all the props through the burgerBuilder
