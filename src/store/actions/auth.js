@@ -47,12 +47,11 @@ export const auth = (email, password, isSignup) => {
       password: password,
       returnSecureToken: true,
     };
-    let url =
-      "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyC388aT9wRw5lvDvKcQJNcL6S9Zdu9RMbs";
+    const api_key = process.env.REACT_APP_API_KEY;
+    let url = `https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${api_key}`;
 
     if (!isSignup) {
-      url =
-        "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyC388aT9wRw5lvDvKcQJNcL6S9Zdu9RMbs";
+      url = `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${api_key}`;
     }
     axios
       .post(url, authData)

@@ -10,7 +10,7 @@ import Spinner from "../../components/UI/Spinner/Spinner";
 import withErrorHandler from "../../hoc/withErrorHandler/withErrorHandler";
 import * as actions from "../../store/actions/index";
 
-class BurgerBuilder extends Component {
+export class BurgerBuilder extends Component {
   // constructor(props) {
   //   super(props);
   //   this.state = {...}
@@ -27,16 +27,6 @@ class BurgerBuilder extends Component {
   componentDidMount() {
     // console.log(this.props)
     this.props.onInitIngredients();
-    // axios
-    //   .get(
-    //     "https://react-my-burger-b8612-default-rtdb.europe-west1.firebasedatabase.app/ingredients.json"
-    //   )
-    //   .then((response) => {
-    //     this.setState({ ingredients: response.data });
-    //   })
-    //   .catch((error) => {
-    //     this.setState({ error: true });
-    //   });
   }
 
   updatePurchaseState(ingredients) {
